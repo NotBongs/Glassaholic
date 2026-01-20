@@ -112,11 +112,6 @@ Issues and pull requests are welcome! Feel free to:
 
 MIT License - feel free to modify and share!
 
-## 💖 Credits
-
-- Based on [system24](https://github.com/refact0r/system24) by refact0r
-- Transparency modifications by [notbongs](https://github.com/NotBongs)
-
 ## 🔗 Links
 
 - [GitHub Repository](https://github.com/NotBongs/Glassaholic)
