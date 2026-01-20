@@ -1,0 +1,362 @@
+/**
+ * @name Glassaholic
+ * @version 1.0.0
+ * @description A Translucent/Frosted Glass Discord Theme
+ * @author Bongsy
+ *
+ * @website https://github.com/NotBongs
+ */
+
+/* Import base theme styles */
+@import url(https://notbongs.github.io/Glassaholic/Glassaholic/css/source.css);
+
+:root {
+	/* ============================================
+	   CUSTOMIZATION SECTION - ADJUST THESE VALUES
+	   ============================================ */
+	
+	/* BLUR AMOUNT - Higher = more blur (try 8-20) */
+	--app-blur: 15px;
+	
+	/* TRANSPARENCY LEVELS (0.0 = fully transparent, 1.0 = fully opaque) */
+	--sidebar-transparency: 0.25;        /* Server list and channel sidebar */
+	--chat-transparency: 0.12;           /* Main chat area */
+	--message-transparency: 0.28;        /* Individual message backgrounds */
+	--card-transparency: 0.32;           /* Cards, buttons, etc */
+	--popout-transparency: 0.70;         /* Menus and popups */
+	
+	/* ACCENT COLOR (Your theme's main color) */
+	--accent-hue: 351;                   /* Color (0-360): 156=teal, 210=blue, 0=red, 120=green */
+	--accent-saturation: 100%;          /* Color intensity */
+	--accent-lightness: 74%;           /* Color brightness */
+	--accent-opacity: 1;
+	--accent-text-color: hsl(0, 0%, 100%);   /* Text on accent-colored buttons */
+	
+	/* CORNER ROUNDING */
+	--message-radius: 8px;               /* Message bubble corners */
+	--button-radius: 16px;               /* Button corners */
+	--textarea-radius: 22px;             /* Text input corners */
+	
+	/* ============================================
+	   END CUSTOMIZATION SECTION
+	   ============================================ */
+
+	/* APP ELEMENTS - TRANSPARENT FOR DESKTOP BACKGROUND */
+	--app-bg: transparent !important;
+	--app-margin: 0px;
+	--app-radius: 0px;
+
+	/* CALCULATED COLORS - Don't edit these */
+	--sidebar-color: rgba(0,0,0,var(--sidebar-transparency));
+	--main-content-color: rgba(0,0,0,var(--chat-transparency));
+	--message-color: rgba(0,0,0,var(--message-transparency));
+	--card-color: rgba(0,0,0,var(--card-transparency));
+	--card-color-hover: rgba(0,0,0,calc(var(--card-transparency) + 0.1));
+	--card-color-select: rgba(0,0,0,calc(var(--card-transparency) + 0.25));
+	--popout-color: rgba(0,0,0,var(--popout-transparency));
+
+	/* MESSAGE SETTINGS */
+	--message-padding-top: 8px;
+	--message-padding-side: 8px;
+
+	/* REPLY HSL COLOR SETTINGS */
+	--reply-hue: 226;
+	--reply-saturation: 77.4%;
+	--reply-lightness: 61.8%;
+	--reply-opacity: 1;
+
+	/* TEXTAREA SETTINGS */
+	--textarea-color: 255,255,255;
+	--textarea-alpha: 0.15;
+	--textarea-alpha-focus: 0.25;
+	--textarea-text-color: hsl(0,0%,100%);
+
+	/* BUTTON SETTINGS */
+	--button-height: 32px;
+	--button-padding: 0 16px;
+	--button-action-color: hsl(0,0%,0%);
+	
+	/* POPOUT SETTINGS */
+	--popout-blur: 12px;
+}
+
+/* Make Discord window transparent */
+.app-3xd6d0,
+.app-2CXKsg,
+.app__93d1e {
+	background: transparent !important;
+}
+
+.bg-1QIAus,
+.bg__12180,
+.bg__6b4d3 {
+	background: transparent !important;
+}
+
+.appMount-2yBXZl,
+.appMount__73aaa {
+	background: transparent !important;
+}
+
+/* Ensure layers container is transparent */
+.layers-OrUESM,
+.layers__93f6a,
+.layers__1c917 {
+	background: transparent !important;
+}
+
+/* Make base container transparent */
+.base-2jDfDU,
+.base__3bed6,
+.base__a1d60 {
+	background: transparent !important;
+}
+
+/* Content background transparency */
+.content-1gYQeQ,
+.content__23f57,
+.content__1a7a1 {
+	background: transparent !important;
+}
+
+/* Chat background with blur */
+.chat-2ZfjoI,
+.chat__52833,
+.chat__f4f9b,
+.chatContent-3KubbW,
+.chatContent__5dca6,
+.chatContent__93edd {
+	background: var(--main-content-color) !important;
+	backdrop-filter: blur(var(--app-blur)) !important;
+	-webkit-backdrop-filter: blur(var(--app-blur)) !important;
+}
+
+/* Sidebar transparency with blur */
+.sidebar-1tnWFu,
+.sidebar__58b86,
+.sidebar__7c9b6,
+.container-2o3qEW,
+.container__590e2,
+.container__3779b {
+	background: var(--sidebar-color) !important;
+	backdrop-filter: blur(var(--app-blur)) !important;
+	-webkit-backdrop-filter: blur(var(--app-blur)) !important;
+}
+
+/* Server list transparency */
+.wrapper-1_HaEi,
+.wrapper__8436d,
+.wrapper__d4665,
+.guilds-2JjMmN,
+.guilds__4b4b5,
+.guilds__5a5da {
+	background: rgba(0,0,0,calc(var(--sidebar-transparency) + 0.05)) !important;
+	backdrop-filter: blur(var(--app-blur)) !important;
+	-webkit-backdrop-filter: blur(var(--app-blur)) !important;
+}
+
+/* Title bar transparency */
+.typeWindows-2-g3UY,
+.typeWindows__86a8e,
+.typeWindows__093ab,
+.wordmark-2u86JB,
+.wordmark__0d3b2,
+.wordmark__4dd6a {
+	background: transparent !important;
+}
+
+.titleBar-1it3bQ,
+.titleBar__01af6,
+.titleBar__e3f40 {
+	background: rgba(0,0,0,0.35) !important;
+	backdrop-filter: blur(var(--app-blur)) !important;
+	-webkit-backdrop-filter: blur(var(--app-blur)) !important;
+}
+
+/* Members list transparency */
+.membersWrap-3NUR2t,
+.membersWrap__90226,
+.membersWrap__cbd08,
+.members-3WRCEx,
+.members__9f47b,
+.members__7aa43 {
+	background: rgba(0,0,0,calc(var(--sidebar-transparency) - 0.05)) !important;
+	backdrop-filter: blur(var(--app-blur)) !important;
+	-webkit-backdrop-filter: blur(var(--app-blur)) !important;
+}
+
+/* Settings/Content regions */
+.contentRegion-3HkfJJ,
+.contentRegion__0d6bd,
+.contentRegion__3ddf0,
+.sidebarRegion-1VBisG,
+.sidebarRegion__1de9c,
+.sidebarRegion__c7162 {
+	background: rgba(0,0,0,calc(var(--chat-transparency) + 0.08)) !important;
+	backdrop-filter: blur(var(--app-blur)) !important;
+	-webkit-backdrop-filter: blur(var(--app-blur)) !important;
+}
+
+/* Message areas */
+.messagesWrapper-RpOMA3,
+.messagesWrapper__1bcfa,
+.messagesWrapper__e2f98,
+.scroller-3X7KbA,
+.scroller__05f7e,
+.scroller__8af19 {
+	background: transparent !important;
+}
+
+/* Container backgrounds */
+.container-ZMc96U,
+.container__11d72,
+.container__5fd87,
+.wrapper-1gVUIN,
+.wrapper__480e2,
+.wrapper__8c6ad {
+	background: transparent !important;
+}
+
+/* Panel backgrounds (bottom user area) */
+.panels-3wFtMD,
+.panels__58331,
+.panels__0a747 {
+	background: rgba(0,0,0,calc(var(--sidebar-transparency) + 0.1)) !important;
+	backdrop-filter: blur(var(--app-blur)) !important;
+	-webkit-backdrop-filter: blur(var(--app-blur)) !important;
+}
+
+/* Popout menus with enhanced blur */
+.menu-1QACrS,
+.menu__088f7,
+.menu__9e1d7,
+.layer-86YKbF,
+.layer__5f2e6,
+.layer__c4a31 {
+	backdrop-filter: blur(calc(var(--app-blur) * 1.5)) !important;
+	-webkit-backdrop-filter: blur(calc(var(--app-blur) * 1.5)) !important;
+}
+
+/* Modal backgrounds */
+.root-g14mjS,
+.root__1c5ee,
+.root__8a6c4 {
+	background: var(--popout-color) !important;
+	backdrop-filter: blur(calc(var(--app-blur) * 1.2)) !important;
+	-webkit-backdrop-filter: blur(calc(var(--app-blur) * 1.2)) !important;
+}
+
+/* User popout */
+.userPopoutOuter-1V9a_X,
+.userPopoutOuter__14e2e,
+.userPopoutOuter__b5f57 {
+	background: var(--popout-color) !important;
+	backdrop-filter: blur(var(--popout-blur)) !important;
+	-webkit-backdrop-filter: blur(var(--popout-blur)) !important;
+}
+
+/* Search results */
+.searchResultsWrap-5RVOkx,
+.searchResultsWrap__7f3a0,
+.searchResultsWrap__e5b72 {
+	background: var(--sidebar-color) !important;
+	backdrop-filter: blur(var(--app-blur)) !important;
+	-webkit-backdrop-filter: blur(var(--app-blur)) !important;
+}
+
+/* Thread sidebar */
+.container-1NXEtd,
+.container__64b6f,
+.container__cb3e8 {
+	background: var(--main-content-color) !important;
+	backdrop-filter: blur(var(--app-blur)) !important;
+	-webkit-backdrop-filter: blur(var(--app-blur)) !important;
+}
+
+/* Autocomplete */
+.autocomplete-3NRXG8,
+.autocomplete__9a7f1,
+.autocomplete__c4d6b {
+	background: var(--popout-color) !important;
+	backdrop-filter: blur(var(--popout-blur)) !important;
+	-webkit-backdrop-filter: blur(var(--popout-blur)) !important;
+}
+
+@supports (color:color-mix(in lch,red,blue)) {
+    .visual-refresh .theme-dark,
+    .visual-refresh.theme-dark {
+		/* TEXT COLOR SETTINGS - Enhanced for visibility on transparent backgrounds */
+		--text-primary: hsl(0,0%,100%);
+		--text-secondary: hsl(0,0%,85%);
+
+		/* CHANNEL COLOR SETTINGS */
+		--channels-default: hsl(0,0%,72%);
+		--channel-icon: hsl(0,0%,72%);
+
+		/* ICON COLOR SETTINGS */
+		--icon-primary: hsl(0,0%,98%);
+		--icon-secondary: hsl(0,0%,90%);
+		--icon-tertiary: hsl(0,0%,78%);
+
+		/* INTERACTIVE COLOR SETTINGS */
+		--interactive-normal: hsl(0,0%,87%);
+		--interactive-hover: hsl(0,0%,96%);
+		--interactive-active: hsl(0,0%,100%);
+		--interactive-muted: hsl(0,0%,55%);
+
+		/* BACKGROUND MODIFIER SETTINGS */
+		--background-modifier-hover: rgba(255,255,255,0.1);
+		--background-modifier-selected: rgba(255,255,255,0.16);
+		--background-modifier-accent: rgba(255,255,255,0.22);
+    }
+}
+
+/* Additional transparency adjustments */
+.theme-dark {
+	--background-primary: transparent;
+	--background-secondary: rgba(0,0,0,calc(var(--chat-transparency) + 0.08));
+	--background-secondary-alt: rgba(0,0,0,calc(var(--chat-transparency) + 0.13));
+	--background-tertiary: rgba(0,0,0,calc(var(--sidebar-transparency)));
+	--background-accent: rgba(0,0,0,calc(var(--card-transparency)));
+	--background-floating: var(--popout-color);
+	--background-modifier-hover: rgba(255,255,255,0.08);
+	--background-modifier-active: rgba(255,255,255,0.12);
+	--background-modifier-selected: rgba(255,255,255,0.15);
+	--background-modifier-accent: rgba(255,255,255,0.18);
+	--elevation-low: 0 1px 0 rgba(0,0,0,0.2), 0 1.5px 0 rgba(0,0,0,0.05), 0 2px 0 rgba(0,0,0,0.05);
+	--elevation-high: 0 8px 16px rgba(0,0,0,0.35);
+}
+
+/* Text shadows for better readability on transparent backgrounds */
+.username-h_Y3Us,
+.username__0b0e7,
+.username__5f58a,
+.header-1ffhsl,
+.header__93901,
+.header__2af30,
+.name-3Uvkvr,
+.name__0eae3,
+.name__8d1ec {
+	text-shadow: 0 1px 4px rgba(0,0,0,0.9), 0 0 8px rgba(0,0,0,0.6);
+}
+
+/* Message text readability */
+.markup-eYLPri,
+.markup__10b95,
+.markup__f8f4c {
+	text-shadow: 0 1px 3px rgba(0,0,0,0.7), 0 0 6px rgba(0,0,0,0.4);
+}
+
+/* Channel names readability */
+.name__8d739,
+.name-28HaxV,
+.name__1d9f1 {
+	text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+}
+
+/* Improve contrast on very transparent backgrounds */
+.container-1NXEtd *,
+.container__64b6f *,
+.container__cb3e8 * {
+	text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+}
