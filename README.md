@@ -117,12 +117,13 @@ MIT License - feel free to modify and share!
 - [GitHub Repository](https://github.com/NotBongs/Glassaholic)
 - [Issues](https://github.com/NotBongs/Glassaholic/issues)
 - [Vencord](https://vencord.dev/)
+- [Mica For Everyone](https://github.com/MicaForEveryone/MicaForEveryone)
 
 ---
 
 <div align="center">
 
-Made with 💖 by [notbongs](https://github.com/NotBongs)
+Made with 💖 by [NotBongs](https://github.com/NotBongs)
 
 ⭐ Star this repo if you like it!
 
