@@ -13,9 +13,6 @@ A glass-themed terminal Discord experience with desktop blur effects for Vencord
 
 - 🪟 **Desktop transparency** - Your wallpaper shows through Discord
 - 💨 **Frosted glass blur** - Beautiful backdrop blur effects
-- 💻 **Terminal aesthetic** - Monospace fonts and TUI-style interface
-- 🏷️ **Panel labels** - Clean labels like "nav", "chat", "input"
-- 📦 **Square corners** - Classic terminal look, no rounded edges
 - 🎨 **Customizable accent** - Easy hex color customization
 - ⚡ **Lightweight** - Optimized performance
 
