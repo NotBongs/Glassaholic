@@ -3,7 +3,7 @@
 
 > Addicted to transparency
 
-A glass-themed terminal Discord experience with desktop blur effects for Vencord.
+A glass-themed Discord experience with desktop blur effects for Vencord.
 
 ![Version](https://img.shields.io/badge/Version-1.0.0-ff7b8a?style=flat-square)
 ![Vencord](https://img.shields.io/badge/Vencord-Compatible-5865F2?style=flat-square)
